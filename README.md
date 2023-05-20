@@ -1,28 +1,18 @@
 # MyPrint
 The 3d printing ticket system built to be simple
 
-### !!! Copyed from sveltekit's Readme !!!
-## Developing
+## Built with 
+* Svelte Kit
+* Quick DB
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Getting Started 
+Download needed packages from npm using 
+``npm i``
 
-```bash
-npm run dev
+### Running local dev server
+``npm run dev``
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+### Building for nodejs deploy
+``npm run build``
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-### !!! Copyed from sveltekit's Readme !!!
 ### Built with Sveltekit
