@@ -17,10 +17,9 @@
         </li>
         <li>
             <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <div class="icon" aria-current={$page.url.pathname === '/view' ? 'page' : undefined} on:click={() => window.location.href = "./view"}>
+            <div class="icon" aria-current={$page.url.pathname === '/tickets' ? 'page' : undefined} on:click={() => window.location.href = "./tickets"}>
                 <span class="material-symbols-outlined">
                     checklist
-                    
                 </span>
             </div>
         </li>

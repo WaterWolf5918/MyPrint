@@ -5,9 +5,10 @@
 </script>
 
 <div class="mobile-display">
-    <div class="scroll2">
+    <!-- <div class="scroll2">
         <slot></slot>
-    </div>
+    </div> -->
+    <slot></slot>
     <div class="spacer"></div>
     <Appbar></Appbar>
 </div>
@@ -24,6 +25,8 @@
     }
     div.scroll2{
         overflow-y: scroll;
+        scrollbar-color: red;
+        scrollbar-width:thin;
         height: 100%;
     }
     .spacer{

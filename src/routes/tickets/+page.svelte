@@ -80,5 +80,11 @@
         display: flex;
         flex-direction: row;
         flex-flow: row;
+        padding-bottom: 6px;
+        overflow-y: scroll;
+        overflow-x: scroll;
+        overflow: scroll;
+        scrollbar-color: rgb(88,88,88) rgb(33,33,33);
+        scrollbar-width: thin;
     }
 </style>

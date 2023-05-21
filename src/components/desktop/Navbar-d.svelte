@@ -6,7 +6,7 @@
         <ul>
             <li><img id="myPrintLogo" src="MyPrint-noback.png" alt="MyPrint Logo" style="width:128px;height:128px;"></li>
             <li><a href="./">Home</a></li>
-            <li><a href="./view">Tickets</a></li>
+            <li><a href="./tickets">Tickets</a></li>
             <li><a href="./newTicket">New Ticket</a></li>
             <li><a href="./webcam">Webcam</a></li>
             <li><a href="/">OctoPrint</a></li>

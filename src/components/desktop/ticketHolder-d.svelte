@@ -25,6 +25,7 @@
         background: rgb(100,100,100);
         padding: 8px;
         border-radius: 10px;
+        
     }
     .item{
         margin-bottom: 10px;
