@@ -1,21 +1,76 @@
-<script>
-import TicketD from "../../components/desktop/Ticket-d.svelte";
-	import TicketMaster from "../../components/ticket-Master.svelte";
-	import TicketHolderMaster from "../../components/ticketHolder-Master.svelte";
+<script lang="ts">
+    import { onMount } from "svelte";
+    import TicketMaster from "../../components/ticket-Master.svelte";
+    import TicketHolderMaster from "../../components/ticketHolder-Master.svelte";
+    let tickets: string | any[] = []
+    let cTickets: any[] = []
+    let hTickets: any[] = []
+    let mTickets: any[] = []
+    let lTickets: any[] = []
+    let nTickets: any[] = []
+    onMount(async ()=>{
+        tickets = await (await fetch('./api/getTickets',{})).json()
+        for(let i = 0; i < tickets.length; i++){
+            console.log(tickets[i].priority)
+            switch(tickets[i].priority){
+                case "critical-priority":
+                    cTickets = [...cTickets, tickets[i]]
+                    break
+                case "high-priority":
+                    hTickets = [...hTickets, tickets[i]]
+                    break 
+                case "medium-priority":
+                    mTickets = [...mTickets, tickets[i]]
+                    break
+                case "low-priority":
+                    lTickets = [...lTickets, tickets[i]]
+                    break
+                default:
+                    nTickets = [...nTickets, tickets[i]]
+                    console.log(nTickets)
+                    break
+            }
+        }
+    })
+    
+    const criticalColor = ""
 </script>
+
 
 <main>
     <div id="horizontal-scroll-box">
-        <TicketHolderMaster category="Critical Priority" color="rgb(255,0,0)">
-            <TicketMaster title="Test Print Cube" desc="This is a vary basic cube to print for testing" url="https://google.com"/>
-            <TicketMaster title="Test Print Cube" desc="This is a vary basic cube to print for testing" url="https://google.com"/>
-            <TicketMaster title="Test Print Cube" desc="This is a vary basic cube to print for testing" url="https://google.com"/>
-            <TicketMaster title="Test Print Cube" desc="This is a vary basic cube to print for testing" url="https://google.com"/>
-            <TicketMaster title="Test Print Cube" desc="This is a vary basic cube to print for testing" url="https://google.com"/>
+        <TicketHolderMaster category="Critical Priority" color="rgb(220,0,150)">      
+            {#each cTickets as {title,desc,link,priority},i}
+                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {/each}
         </TicketHolderMaster>
 
-        <TicketHolderMaster category="High Priority" color="rgb(230,150,0)">
-            <TicketMaster title="Test Print Cube" desc="This is a vary basic cube to print for testing" url="https://google.com"/>
+
+        <TicketHolderMaster category="High Priority" color="rgb(255,0,0)">
+            {#each hTickets as {title,desc,link,priority},i}
+                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {/each}
+        </TicketHolderMaster>
+
+
+        <TicketHolderMaster category="Medium Priority" color="rgb(230,150,0)">
+            {#each mTickets as {title,desc,link,priority},i}
+                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {/each}
+        </TicketHolderMaster>
+
+
+        <TicketHolderMaster category="Low Priority" color="rgb(0,255,0)">
+            {#each lTickets as {title,desc,link,priority},i}
+                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {/each}
+        </TicketHolderMaster>
+
+
+        <TicketHolderMaster category="No Priority" color="rgb(20,20,200)">
+            {#each nTickets as {title,desc,link,priority},i}
+                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {/each}
         </TicketHolderMaster>
     </div>
 </main>
@@ -26,8 +81,4 @@ import TicketD from "../../components/desktop/Ticket-d.svelte";
         flex-direction: row;
         flex-flow: row;
     }
-
-
-
-
 </style>
