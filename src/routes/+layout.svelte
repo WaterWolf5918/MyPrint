@@ -1,19 +1,16 @@
 <script>
-	import Header from '../components/Header.svelte';
-	import Navbar from '../components/Navbar.svelte';
-	import Sidebar from '../components/Sidebar.svelte';
+	import Navbar from '../components/navbar-Master.svelte';
 	// import './styles.css';
 </script>
 
 <div class="app">
 	<title>MyPrint</title>
 	<Navbar>
-		<main>
-			<slot />
-		</main>
+		<slot></slot>
 	</Navbar>
 
 </div>
+
 
 <style>
 	.app {
@@ -22,16 +19,6 @@
 		min-height: 100vh;
 	}
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
 
 	footer {
 		display: flex;
@@ -50,6 +37,7 @@
 			padding: 12px 0;
 		}
 	}
+
 	:global(body) {
 		color: white;
 		min-height: 100vh;
@@ -59,9 +47,9 @@
 		background-size: 100vw 100vh;
 		background: rgb(22, 22, 22);
 		color-scheme: dark;
+		font-family: Arial, Helvetica, sans-serif;
 	}
-
-
+	
 
 
 </style>

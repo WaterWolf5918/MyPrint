@@ -1,14 +1,14 @@
 <script>
-	import Header from '../components/Header.svelte';
-	import Sidebar from '../components/Sidebar.svelte';
-	import Appbar from './Appbar.svelte';
+	import Sidebar from './desktop/Navbar-d.svelte';
+	import Appbar from './mobile/Navbar-m.svelte';
 	// import './styles.css';
 </script>
 
 <div class="mobile-display">
-    <!-- <Header></Header> -->
-    <slot></slot>
-    <!-- <Header></Header> -->
+    <div class="scroll2">
+        <slot></slot>
+    </div>
+    <div class="spacer"></div>
     <Appbar></Appbar>
 </div>
 <div class="desktop-display">
@@ -21,6 +21,13 @@
     div.scroll{
         overflow-y: scroll;
         height: 100vh;
+    }
+    div.scroll2{
+        overflow-y: scroll;
+        height: 100%;
+    }
+    .spacer{
+        margin-top: 3em;
     }
 
     .mobile-display{display:none}

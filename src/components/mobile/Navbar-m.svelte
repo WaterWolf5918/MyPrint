@@ -1,14 +1,8 @@
 <script>
-
-
-
 	import { page } from "$app/stores";
 
 </script>
-<footer>
 
-
-</footer>
 
 
 <div id="footer">
@@ -65,7 +59,8 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        margin-top: 3em;
+        margin-top: 5em;
+
     }
     ul {
 		position: relative;
