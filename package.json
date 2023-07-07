@@ -20,9 +20,7 @@
 		"@typescript-eslint/parser": "^5.45.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-svelte3": "^4.0.0",
 		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.10.1",
 		"svelte": "^4.0.0",
 		"svelte-check": "^3.4.3",
 		"tslib": "^2.4.1",
@@ -33,6 +31,7 @@
 	"dependencies": {
 		"better-sqlite3": "^8.2.0",
 		"dotenv": "^16.0.3",
+		"puppeteer": "^20.7.4",
 		"quick.db": "^9.1.3"
 	}
 }

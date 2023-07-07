@@ -51,10 +51,20 @@
     </ul>
 </div>
 <style>
+    :root{
+        --height: 4em
+    }
+    @media (max-width:1024px){
+        :root{
+            --height: 3em
+        }
+    }
+
+
     #footer{
         background: rgb(167, 167, 167);
         width: 100%;
-        height: 3em;
+        height: var(--height);
         position: fixed;
         bottom: 0;
         left: 0;
@@ -65,7 +75,7 @@
 		position: relative;
 		padding: 0;
 		margin: 0;
-		height: 3em;
+		height: var(--height);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -85,6 +95,9 @@
         border-radius:5px;
     }
 
+    .icon > span {
+        font-size: calc(var(--height) / 2)
+    }
     .icon[aria-current='page']{
         color: rgb(0, 136, 255);
     }

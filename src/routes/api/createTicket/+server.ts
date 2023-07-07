@@ -26,7 +26,9 @@ export const POST: RequestHandler = async ({request}) => {
         console.log(`    Time ${new Date(info.timestamp).toLocaleString()}`)
         console.log(createBar())
 
-		return new Response('')
+		return new Response(JSON.stringify({
+            "succes":true
+        }))
 	}catch(error){
 		console.error(error)
 		return new Response('Error')

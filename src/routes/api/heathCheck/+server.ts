@@ -10,7 +10,7 @@ export const GET: RequestHandler = async ({url}) => {
         console.log(`Server Heath OK`)
         console.log(`Term Columns #${process.stdout.columns}`)
         console.log(`Term Rows #${process.stdout.rows}`)
-        console.log(`System Uptime ${new Date(os.uptime) /60 /60} Hours`)
+        console.log(`System Uptime ${os.uptime /60 /60} Hours`)
         console.log(createBar())
 		return new Response("OK")
 	}catch(error){

@@ -6,6 +6,11 @@ declare global {
 		// interface Locals {}
 		// interface PageData {}
 		// interface Platform {}
+		export interface previewJSON {
+			title: string
+			desc: string
+			img: string
+		}
 	}
 }
 

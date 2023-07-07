@@ -32,11 +32,12 @@
     .spacer{
         margin-top: 3em;
     }
-
-    .mobile-display{display:none}
+    .desktop-display {display:none}
+    .mobile-display {display:block}
+    /* .mobile-display{display:none}
     .desktop-display{display:block}
     @media (max-width:1024px){
         .desktop-display {display:none}
         .mobile-display {display:block}
-    }
+    } */
 </style>
