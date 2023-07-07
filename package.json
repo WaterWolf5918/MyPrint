@@ -29,7 +29,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"better-sqlite3": "^8.2.0",
+		"@types/better-sqlite3": "^7.6.4",
+		"better-sqlite3": "^8.4.0",
 		"dotenv": "^16.0.3",
 		"puppeteer": "^20.7.4",
 		"quick.db": "^9.1.3"

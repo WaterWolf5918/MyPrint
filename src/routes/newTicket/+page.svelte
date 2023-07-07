@@ -125,11 +125,11 @@
 		/><br />
 		<label for="priority">Ticket priority:</label><br />
 		<select bind:value={inputPriority} name="priority" id="priority" required>
-			<option value="critical-priority">Critical-priority</option>
-			<option value="high-priority">High-priority</option>
-			<option value="medium-priority">Medium-priority</option>
-			<option value="low-priority">Low-priority</option>
-			<option value="no-priority">No-priority</option>
+			<option value="5">Critical-priority</option>
+			<option value="4">High-priority</option>
+			<option value="3">Medium-priority</option>
+			<option value="2">Low-priority</option>
+			<option value="1">No-priority</option>
 		</select>
 		<input type="submit" value="Submit" />
 	</form>
@@ -169,7 +169,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="confirm-box2" class="">
+	<div id="confirm-box2" class="hidden">
 		<p id="confirm-title">MyPrint</p>
 		<p id="confirm-desc2">Print Submited</p>
 		<span class="material-symbols-outlined">done</span>

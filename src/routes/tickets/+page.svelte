@@ -13,16 +13,16 @@
         for(let i = 0; i < tickets.length; i++){
             console.log(tickets[i].priority)
             switch(tickets[i].priority){
-                case "critical-priority":
+                case 5:
                     cTickets = [...cTickets, tickets[i]]
                     break
-                case "high-priority":
+                case 4:
                     hTickets = [...hTickets, tickets[i]]
                     break 
-                case "medium-priority":
+                case 3:
                     mTickets = [...mTickets, tickets[i]]
                     break
-                case "low-priority":
+                case 2:
                     lTickets = [...lTickets, tickets[i]]
                     break
                 default:
@@ -40,36 +40,36 @@
 <main>
     <div id="horizontal-scroll-box">
         <TicketHolderMaster category="Critical Priority" color="rgb(220,0,150)">      
-            {#each cTickets as {title,desc,link,priority},i}
-                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {#each cTickets as {title,description,link,priority},i}
+                <TicketMaster title="{title}" desc="{description}" url="{link}"/>
             {/each}
         </TicketHolderMaster>
 
 
         <TicketHolderMaster category="High Priority" color="rgb(255,0,0)">
-            {#each hTickets as {title,desc,link,priority},i}
-                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {#each hTickets as {title,description,link,priority},i}
+                <TicketMaster title="{title}" desc="{description}" url="{link}"/>
             {/each}
         </TicketHolderMaster>
 
 
         <TicketHolderMaster category="Medium Priority" color="rgb(230,150,0)">
-            {#each mTickets as {title,desc,link,priority},i}
-                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {#each mTickets as {title,description,link,priority},i}
+                <TicketMaster title="{title}" desc="{description}" url="{link}"/>
             {/each}
         </TicketHolderMaster>
 
 
         <TicketHolderMaster category="Low Priority" color="rgb(0,255,0)">
-            {#each lTickets as {title,desc,link,priority},i}
-                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {#each lTickets as {title,description,link,priority},i}
+                <TicketMaster title="{title}" desc="{description}" url="{link}"/>
             {/each}
         </TicketHolderMaster>
 
 
         <TicketHolderMaster category="No Priority" color="rgb(20,20,200)">
-            {#each nTickets as {title,desc,link,priority},i}
-                <TicketMaster title="{title}" desc="{desc}" url="{link}"/>
+            {#each nTickets as {title,description,link,priority},i}
+                <TicketMaster title="{title}" desc="{description}" url="{link}"/>
             {/each}
         </TicketHolderMaster>
     </div>

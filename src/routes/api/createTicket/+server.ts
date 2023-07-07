@@ -1,20 +1,28 @@
+import { ServerCreateTicket } from '$lib/database';
 import { createBar } from '$lib/helper';
 import type { RequestHandler } from '@sveltejs/kit'
-import { QuickDB } from "quick.db";
-const db = new QuickDB({ filePath: 'database.sqlite'})
 export const POST: RequestHandler = async ({request}) => {
 	try {
+
         // await db.set("userInfo", { difficulty: "Easy" });
-        let info = {
-            "timestamp":"",
+        let info: ticketBuilder = {
+            "timestamp":0,
             "title":"",
             "desc":"",
             "link":"",
-            "priority":"",
+            "priority":0,
             "userAgent":""
         }
         info = await request.json()
-        await db.push("tickets",info)
+        ServerCreateTicket({
+            "timestamp":info.timestamp,
+            "title":info.title,
+            "desc":info.desc,
+            "link":info.link,
+            "priority":info.priority,
+            "userAgent":info.userAgent
+        })
+        // await db.push("tickets",info)
         // console.table(info)
         console.log(createBar("| New ticket recived {RESTAPI} |"))
         console.log(`Ticket Saved To Database`)

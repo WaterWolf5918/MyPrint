@@ -12,6 +12,15 @@ declare global {
 			img: string
 		}
 	}
+
+	export interface ticketBuilder {
+		timestamp: number
+		title: string
+		desc: string
+		link: string
+		priority: number
+		userAgent: string
+	}
 }
 
 export {};
